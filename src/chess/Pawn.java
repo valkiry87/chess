@@ -1,4 +1,4 @@
 package chess;
 
-public class Pawn extends ChessFigur{
+public class Pawn extends ChessFigure{
 }

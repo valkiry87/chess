@@ -1,4 +1,4 @@
 package chess;
 
-public class Queen extends ChessFigur{
+public class Queen extends ChessFigure{
 }
