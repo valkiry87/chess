@@ -1,5 +1,6 @@
 package test;
-import org.testng.annotations.Test;
+
+import org.junit.jupiter.api.Test;
 
 import static chess.ChessFigure.checkNewPosition;
 import static chess.Main.setFigure;
