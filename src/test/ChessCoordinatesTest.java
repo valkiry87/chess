@@ -1,8 +1,9 @@
-package chess.coordinates;
+package test;
 
-import org.junit.jupiter.api.Test;
+import chess.coordinates.ChessCoordinates;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.AssertJUnit.assertEquals;
 
 class ChessCoordinatesTest {
     @Test

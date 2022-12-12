@@ -1,19 +1,28 @@
 package test;
+import org.testng.annotations.Test;
 
-import org.junit.jupiter.api.Test;
-
-import static chess.ChessFigure.checkNewPosition;
+import static chess.figures.ChessFigure.checkNewPosition;
 import static chess.Main.setFigure;
-import static chess.Main.setPosition;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class JUnitTest {
     @Test
     void KingPositiveTest() {
-        checkNewPosition(setFigure("King"),setPosition("e2"));
+        assertEquals(checkNewPosition(setFigure("King"), "f2"), true);
     }
 
     @Test
     void KingNegativeTest() {
-        checkNewPosition(setFigure("King"),setPosition("a1"));
+        assertEquals(checkNewPosition(setFigure("King"),"a1"), false);
+    }
+
+    @Test
+    void QueenPositiveTest() {
+        assertEquals(checkNewPosition(setFigure("Queen"), "a1"), true);
+    }
+
+    @Test
+    void QueenNegativeTest() {
+        assertEquals(checkNewPosition(setFigure("Queen"),"a0"), false);
     }
 }

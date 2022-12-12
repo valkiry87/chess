@@ -1,19 +1,9 @@
 package chess;
 
-import java.util.ArrayList;
-import java.util.List;
+import chess.figures.*;
+
 public class Main {
     public static void main(String[] args) {
-    }
-
-    public static int[][] setPosition(String position)
-    {
-        List<Character> chars = new ArrayList<>();
-        for (char ch : position.toCharArray()) {
-            chars.add(ch);
-        }
-        ChessBoard chessBoard = new ChessBoard();
-        return chessBoard.getChessBoardPosition(chars.get(0), chars.get(1));
     }
     public static ChessFigure setFigure(String figure)
     {
