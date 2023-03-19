@@ -2,9 +2,9 @@ package chess.figures;
 
 public class ChessFigure {
 
-    public static boolean checkNewPosition (ChessFigure figure, String newPosition) {
+    public static boolean checkNewPosition (ChessFigure figure, String startPosition, String newPosition) {
 
-        if(figure.checkNewCoordinates(newPosition))
+        if(figure.checkNewCoordinates(startPosition, newPosition))
         {
             System.out.println("Korrekte Bewegung");
             return true;
@@ -13,7 +13,7 @@ public class ChessFigure {
         return false;
     }
 
-    public boolean checkNewCoordinates(String newPosition) {
+    public boolean checkNewCoordinates(String startPosition, String newPosition) {
         return false;
     }
 }
