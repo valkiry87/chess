@@ -2,7 +2,7 @@ package chess.figures;
 
 import chess.coordinates.ChessCoordinates;
 
-public class Queen extends ChessFigure {
+public class BlackQueen extends ChessFigure {
     public boolean checkNewCoordinates(String startPosition, String newPosition) {
         ChessCoordinates startCoordinates = ChessCoordinates.forChess(startPosition);
         int startX = startCoordinates.getX();

@@ -2,7 +2,7 @@ package chess.figures;
 
 import chess.coordinates.ChessCoordinates;
 
-public class Rook extends ChessFigure {
+public class WhiteBishop extends ChessFigure{
     public boolean checkNewCoordinates(String startPosition, String newPosition) {
         ChessCoordinates startCoordinates = ChessCoordinates.forChess(startPosition);
         int startX = startCoordinates.getX();
@@ -14,7 +14,17 @@ public class Rook extends ChessFigure {
 
         if (!newPosition.equals(startPosition)) {
             if (newX >= 0 && newX <= 7 && newY >= 0 && newY <= 7) {
-                return (startX == newX || startY == newY);
+                    for (int i = 1; i <= 7; i++) {
+                        if ((newX == (startX - i)) && (newY == (startY - i)))
+                            return true;
+                        if ((newX == (startX + i)) && (newY == (startY + i)))
+                            return true;
+                        if ((newX == (startX - i)) && (newY == (startY + i)))
+                            return true;
+                        if ((newX == (startX + i)) && (newY == (startY - i)))
+                            return true;
+                    }
+                    return false;
             } else return false;
         } else return false;
     }

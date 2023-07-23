@@ -28,4 +28,18 @@ public class ChessCoordinates {
     public String getChess() {
         return new String(new int[]{'a' + x, '1' + y}, 0, 2);
     }
+
+    public static boolean intEquals(Object other) {
+        return (other instanceof Integer aInteger);
+    }
+
+/*
+    public boolean equals(Object anObject) {
+        if (this == anObject) {
+            return true;
+        }
+        return (anObject instanceof String aString)
+                && (!COMPACT_STRINGS || this.coder == aString.coder)
+                && StringLatin1.equals(value, aString.value);
+    }*/
 }

@@ -4,7 +4,7 @@ import chess.coordinates.ChessCoordinates;
 
 import java.util.Arrays;
 
-public class King extends ChessFigure {
+public class WhiteKing extends ChessFigure {
     public boolean checkNewCoordinates(String startPosition, String newPosition) {
         ChessCoordinates startCoordinates = ChessCoordinates.forChess(startPosition);
         int startX = startCoordinates.getX();
