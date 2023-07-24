@@ -16,7 +16,8 @@ public class WhiteKing extends ChessFigure {
         int x = newCoordinates.getX();
         int y = newCoordinates.getY();
         if (!newPosition.equals(startPosition)) {
-            if (x >= 0 && x <= 7 && y >= 0 && y <= 7) {
+            if (newCoordinates.xMoreOrEquals (0) && newCoordinates.xLessOrEquals (7)
+                    && newCoordinates.yMoreOrEquals (0) && newCoordinates.yLessOrEquals(7)) {
                 if (Arrays.stream(availableX).anyMatch(e -> e == x)) {
                     return Arrays.stream(availableY).anyMatch(e -> e == y);
                 } else return false;

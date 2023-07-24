@@ -17,4 +17,8 @@ public enum FiguresEnum {
     FiguresEnum (final String figureName) {
         this.figureName = figureName;
     }
+
+    public String figureName() {
+        return figureName;
+    }
 }

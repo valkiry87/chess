@@ -9,23 +9,22 @@ public class BlackBishop extends ChessFigure{
         int startY = startCoordinates.getY();
 
         ChessCoordinates newCoordinates = ChessCoordinates.forChess(newPosition);
-        int newX = newCoordinates.getX();
-        int newY = newCoordinates.getY();
 
         if (!newPosition.equals(startPosition)) {
-            if (newX >= 0 && newX <= 7 && newY >= 0 && newY <= 7) {
+            if (newCoordinates.xMoreOrEquals (0) && newCoordinates.xLessOrEquals (7)
+                    && newCoordinates.yMoreOrEquals (0) && newCoordinates.yLessOrEquals(7)) {
                     for (int i = 1; i <= 7; i++) {
-                        if ((newX == (startX - i)) && (newY == (startY - i)))
+                        if ((newCoordinates.xEquals (startX - i)) && (newCoordinates.yEquals (startY - i)))
                             return true;
-                        if ((newX == (startX + i)) && (newY == (startY + i)))
+                        if ((newCoordinates.xEquals (startX + i)) && (newCoordinates.yEquals (startY + i)))
                             return true;
-                        if ((newX == (startX - i)) && (newY == (startY + i)))
+                        if ((newCoordinates.xEquals (startX - i)) && (newCoordinates.yEquals (startY + i)))
                             return true;
-                        if ((newX == (startX + i)) && (newY == (startY - i)))
+                        if ((newCoordinates.xEquals (startX + i)) && (newCoordinates.yEquals (startY - i)))
                             return true;
                     }
-                    return false;
-            } else return false;
-        } else return false;
+            }
+        }
+        return false;
     }
 }

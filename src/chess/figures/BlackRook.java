@@ -9,12 +9,11 @@ public class BlackRook extends ChessFigure {
         int startY = startCoordinates.getY();
 
         ChessCoordinates newCoordinates = ChessCoordinates.forChess(newPosition);
-        int newX = newCoordinates.getX();
-        int newY = newCoordinates.getY();
 
         if (!newPosition.equals(startPosition)) {
-            if (newX >= 0 && newX <= 7 && newY >= 0 && newY <= 7) {
-                return (startX == newX || startY == newY);
+            if (newCoordinates.xMoreOrEquals (0) && newCoordinates.xLessOrEquals (7)
+                    && newCoordinates.yMoreOrEquals (0) && newCoordinates.yLessOrEquals(7)) {
+                return (newCoordinates.xEquals(startX) || newCoordinates.yEquals(startY));
             } else return false;
         } else return false;
     }

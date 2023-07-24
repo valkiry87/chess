@@ -29,17 +29,12 @@ public class ChessCoordinates {
         return new String(new int[]{'a' + x, '1' + y}, 0, 2);
     }
 
-    public static boolean intEquals(Object other) {
-        return (other instanceof Integer aInteger);
-    }
+    public boolean xEquals (int newValue) { return this.x == newValue;}
+    public boolean yEquals (int newValue) { return this.y == newValue;}
 
-/*
-    public boolean equals(Object anObject) {
-        if (this == anObject) {
-            return true;
-        }
-        return (anObject instanceof String aString)
-                && (!COMPACT_STRINGS || this.coder == aString.coder)
-                && StringLatin1.equals(value, aString.value);
-    }*/
+    public boolean xMoreOrEquals (int newValue) { return this.x >= newValue;}
+    public boolean yMoreOrEquals (int newValue) { return this.y >= newValue;}
+
+    public boolean xLessOrEquals (int newValue) { return this.x <= newValue;}
+    public boolean yLessOrEquals (int newValue) { return this.y <= newValue;}
 }

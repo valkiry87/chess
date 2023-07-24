@@ -9,14 +9,14 @@ public class WhitePawn extends ChessFigure {
         int startY = startCoordinates.getY();
 
         ChessCoordinates newCoordinates = ChessCoordinates.forChess(newPosition);
-        int newX = newCoordinates.getX();
-        int newY = newCoordinates.getY();
 
         if (!newPosition.equals(startPosition)) {
-            if (newX >= 0 && newX <= 7 && newY >= 2 && newY <= 7) {
-                if (startY == 1 && newX == startX && (newY == startY+1 || newY == startY+2))
+            if (newCoordinates.xMoreOrEquals (0) && newCoordinates.xLessOrEquals (7)
+                    && newCoordinates.yMoreOrEquals (2) && newCoordinates.yLessOrEquals(7)) {
+                if (startCoordinates.yEquals (1) && newCoordinates.xEquals (startX) &&
+                        (newCoordinates.yEquals (startY+1) || (newCoordinates.yEquals ( startY+2))))
                     return true;
-                return newX == startX && newY == startY + 1;
+                return newCoordinates.xEquals (startX) && newCoordinates.yEquals (startY + 1);
             } else return false;
         } else return false;
     }
